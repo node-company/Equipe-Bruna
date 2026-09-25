@@ -1,0 +1,12 @@
+# Produção da Bruna fica só no computador dela
+Entregas/**
+!Entregas/*/
+!Entregas/*/.gitkeep
+
+# Configurações pessoais do Claude e arquivos do sistema
+.claude/settings.local.json
+Thumbs.db
+desktop.ini
+*.tmp
+.env
+.env.*

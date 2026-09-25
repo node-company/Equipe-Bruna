@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read(./**)",
+      "Edit(./**)",
+      "Write(./**)",
+      "WebSearch",
+      "WebFetch",
+      "Skill",
+      "mcp__claude_ai_Higgsfield",
+      "mcp__claude_ai_Google_Drive",
+      "mcp__claude_ai_Google_Calendar",
+      "Bash(curl *)",
+      "Bash(mkdir *)",
+      "Bash(explorer.exe *)",
+      "PowerShell(Invoke-WebRequest *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Set-Clipboard *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(explorer.exe *)",
+      "PowerShell(Start-Process explorer.exe *)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*senha*)",
+      "Read(**/*password*)",
+      "Read(**/client_secret*)",
+      "PowerShell(Remove-Item *)",
+      "Bash(rm -rf *)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "${CLAUDE_PROJECT_DIR}/.claude/hooks/checar-setup.ps1"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
