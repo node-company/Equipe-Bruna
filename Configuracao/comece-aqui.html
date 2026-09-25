@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Comece aqui</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; color: #10202a; background: #fff; }
+  .page { width: 210mm; height: 297mm; padding: 16mm 17mm 14mm; display: flex; flex-direction: column; overflow: hidden; }
+  .eyebrow { font-size: 10pt; letter-spacing: .18em; text-transform: uppercase; color: #1E857D; font-weight: 600; }
+  h1 { font-size: 26pt; margin: 4mm 0 2mm; letter-spacing: -.01em; color: #0A1822; }
+  .lead { font-size: 12pt; line-height: 1.5; color: #3a4a55; margin: 0 0 7mm; max-width: 160mm; }
+  .req { background: #eef7f6; border-left: 3px solid #1E857D; padding: 3.5mm 5mm; font-size: 10.5pt; line-height: 1.5; margin-bottom: 7mm; }
+  ol { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  li { counter-increment: s; position: relative; padding: 0 0 5.2mm 15mm; font-size: 11.5pt; line-height: 1.5; }
+  li::before { content: counter(s); position: absolute; left: 0; top: -.5mm; width: 9mm; height: 9mm; border-radius: 50%; background: #0A1822; color: #57E0D4; font-weight: 700; font-size: 12pt; display: grid; place-items: center; }
+  li b { color: #0A1822; }
+  .path { font-family: Consolas, monospace; background: #f1f3f4; padding: .3mm 1.5mm; border-radius: 1mm; font-size: 10.5pt; }
+  .say { display: inline-block; background: #0A1822; color: #fff; padding: .8mm 3mm; border-radius: 1.5mm; font-weight: 600; }
+  .box { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .card { border: 1px solid #d7e0e3; border-radius: 2mm; padding: 4mm 5mm; font-size: 10pt; line-height: 1.5; }
+  .card h3 { margin: 0 0 1.5mm; font-size: 10.5pt; color: #1E857D; text-transform: uppercase; letter-spacing: .08em; }
+  .card p { margin: 0 0 1.2mm; }
+  .foot { margin-top: 5mm; font-size: 9pt; color: #6b7a82; display: flex; flex-direction: column; gap: 1mm; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Equipe Bruna · guia de instalação</div>
+  <h1>Comece aqui</h1>
+  <p class="lead">São 5 passos, uma única vez. Depois disso, a própria equipe te guia pelo resto, inclusive na conexão das suas contas.</p>
+
+  <div class="req"><b>Você vai precisar de:</b> uma conta do Claude no plano <b>Pro ou Max</b> · o arquivo <b>Equipe Bruna.zip</b> que o Junio te mandou · uns 10 minutos.</div>
+
+  <ol>
+    <li><b>Instale o app do Claude.</b> Acesse <span class="path">claude.ai/download</span>, baixe a versão para Windows, instale e entre com a sua conta.</li>
+    <li><b>Coloque a pasta no lugar.</b> Arraste o arquivo <b>Equipe Bruna.zip</b> para a pasta <b>Documentos</b>. Lá, clique com o botão direito nele → <b>Extrair tudo…</b> → <b>Extrair</b> (sem mudar nada). Vai ficar assim: <span class="path">Documentos\Equipe Bruna</span></li>
+    <li><b>Abra a aba Code.</b> No app do Claude, no topo, clique em <b>Code</b>. Se ele perguntar onde trabalhar, escolha <b>Local</b> (no seu computador).</li>
+    <li><b>Escolha a pasta.</b> Clique em <b>Selecionar pasta</b> (ou no nome da pasta atual) → <b>Documentos</b> → <b>Equipe Bruna</b> → <b>Selecionar pasta</b>. Se aparecer "Confiar nesta pasta?", clique em <b>Sim / Confiar</b>.</li>
+    <li><b>Diga oi.</b> Escreva <span class="say">oi</span> e aperte Enter. O <b>Modo Configuração</b> começa: perguntas sobre a Cardume, a UNDIME e a SCP, e o passo a passo para conectar Google, Higgsfield e Instagram. Leva uns 10 minutos por etapa, e dá para parar e voltar quando quiser.</li>
+  </ol>
+
+  <div class="box">
+    <div class="card">
+      <h3>Palavras mágicas</h3>
+      <p><b>ajuda</b>: o que eu posso pedir?</p>
+      <p><b>continuar configuração</b>: volta de onde parou</p>
+      <p><b>aprovado</b>: prepara o post para publicar</p>
+    </div>
+    <div class="card">
+      <h3>Toda vez que for usar</h3>
+      <p>Abra o app do Claude → <b>Code</b> → confira se a pasta é <b>Equipe Bruna</b> → escreva o que precisa, dizendo de qual empresa é.</p>
+      <p>Nada é publicado ou enviado sem o seu "aprovado".</p>
+    </div>
+  </div>
+
+  <div class="foot"><span>Travou? Aperte Windows + Shift + S, tire um print e cole na conversa (Ctrl + V).</span><span>Suporte: Junio · NodeCompany · (27) 98827-0920</span></div>
+</div>
+</body>
+</html>
